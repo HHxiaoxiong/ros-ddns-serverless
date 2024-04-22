@@ -66,9 +66,8 @@ export class Aliyun extends DnsServer<RecordType> {
         method: "POST",
       }
     );
-    let n=Number(this.ordernum)
     if (result && result.DomainRecords.Record.length > 0) {
-      return result.DomainRecords.Record[n];
+      return result.DomainRecords.Record[0];
     }
     return undefined;
   }
