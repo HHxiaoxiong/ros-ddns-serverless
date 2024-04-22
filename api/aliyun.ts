@@ -67,7 +67,7 @@ export class Aliyun extends DnsServer<RecordType> {
       }
     );
     if (result && result.DomainRecords.Record.length > 0) {
-      return result.DomainRecords.Record[0];
+      return result.DomainRecords.Record[this.ordernum];
     }
     return undefined;
   }
